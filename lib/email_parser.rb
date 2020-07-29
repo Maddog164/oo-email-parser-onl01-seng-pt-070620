@@ -4,7 +4,10 @@
 # or whitespace (' ').
 class EmailAddressParser
 
-  def parse
+  @email_array = []
+
+  def parse(email_addresses)
+    email_addresses.split(/[\s,])
 
   end
 
