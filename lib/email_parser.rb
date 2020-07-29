@@ -7,6 +7,10 @@ class EmailAddressParser
   attr_accessor :name, :email_addresses
   @email_array = []
 
+  def initialize(email_addresses)
+    @csv_emails = emaial_addresses
+  end
+
   def parse
     @email_array << @email_addresses.split(/[\s,]/)
 
