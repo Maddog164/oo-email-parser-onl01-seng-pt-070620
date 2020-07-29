@@ -6,7 +6,7 @@ require 'pry'
 class EmailAddressParser
 
   attr_accessor :name, :email_addresses
-  @email_array = []
+  @@email_array = []
 
   def initialize(email_addresses)
     @csv_emails = email_addresses
@@ -14,7 +14,7 @@ class EmailAddressParser
 
   def parse
     #binding.pry
-    @email_array << @csv_emails.split(/[\s,]/)
+    @@email_array << @csv_emails.split(/[\s,]/)
 
   end
 
