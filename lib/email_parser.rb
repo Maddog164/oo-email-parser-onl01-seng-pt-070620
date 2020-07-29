@@ -7,7 +7,7 @@ class EmailAddressParser
   @email_array = []
 
   def parse(email_addresses)
-    email_addresses.split(/[\s,])
+    @email_array << email_addresses.split(/[\s,])
 
   end
 
