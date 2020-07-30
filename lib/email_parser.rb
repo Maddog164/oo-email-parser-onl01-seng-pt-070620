@@ -5,9 +5,8 @@
 require 'pry'
 class EmailAddressParser
 
-  attr_accessor :name, :email_addresses
-  @@email_array = []
-
+  attr_accessor :email_addresses
+  
   def initialize(email_addresses)
     @csv_emails = email_addresses
   end
