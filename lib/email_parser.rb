@@ -10,6 +10,7 @@ class EmailAddressParser
 
   def initialize(email_addresses)
     @csv_emails = email_addresses
+    @csv_emails.dete_if(&:blank?)
   end
 
   def parse
