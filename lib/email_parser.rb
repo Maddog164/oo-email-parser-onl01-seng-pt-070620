@@ -10,12 +10,12 @@ class EmailAddressParser
 
   def initialize(email_addresses)
     @csv_emails = email_addresses
-    @@email_array << @csv_emails.delete_if(&:blank?)
   end
 
   def parse
     #binding.pry
-    @@email_array << @csv_emails.split(/[\s,]/)
+    @csv_emails << @csv_emails.split(/[\s,]/)
+    @@email_array << @csv_emails.delete_if(&:blank?)
 
   end
 
