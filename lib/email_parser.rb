@@ -13,9 +13,9 @@ class EmailAddressParser
   end
 
   def parse
-    #binding.pry
+    binding.pry
     @csv_emails = @csv_emails.split(/[\s,]/)
-    #binding.pry
+    binding.pry
     @csv_emails = @csv_emails.select!{|val| !val.empty?}
     return @csv_emails
 
