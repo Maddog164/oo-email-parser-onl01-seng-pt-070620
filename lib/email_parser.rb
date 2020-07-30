@@ -13,7 +13,7 @@ class EmailAddressParser
   end
 
   def parse
-    #binding.pry
+    binding.pry
     @csv_emails << @csv_emails.split(/[\s,]/)
     @@email_array << @csv_emails.delete_if(&:blank?)
 
