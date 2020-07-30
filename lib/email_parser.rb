@@ -15,7 +15,7 @@ class EmailAddressParser
   def parse
     binding.pry
     @csv_emails = @csv_emails.split(/[\s,]/)
-    @@email_array << @csv_emails.delete_if(&:blank?)
+    @@email_array << @csv_emails.select!{|val| !val.empty?}
 
   end
 
